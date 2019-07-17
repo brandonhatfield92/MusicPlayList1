@@ -18,8 +18,9 @@ namespace MusicPlayList
             Console.WriteLine("---------------");
             Console.WriteLine();
             Console.WriteLine(" 1. Add Artist");
-            Console.WriteLine(" 2. Exit");
-            Console.WriteLine();
+            Console.WriteLine(" 2. View Artist");
+            Console.WriteLine(" 3. Delete Artist");
+            Console.WriteLine(" 4. Exit");
             Console.Write("Choice: ");
             var result = Console.ReadLine();
             return Convert.ToInt32(result);
@@ -40,7 +41,27 @@ namespace MusicPlayList
             return returnValue;
         }
 
-  
+        public static void ViewArtist()
+        {
+            Console.WriteLine();
+
+        }
+
+
+
+        public static void DeleteArtist()
+        {
+            Console.WriteLine(" Delete Artist ");
+
+
+
+
+        }
+
+
+
+
+
         public static void Run()
         {
             int userInput = 0;
@@ -58,8 +79,17 @@ namespace MusicPlayList
                             break;
 
                         case 2:
-                            Console.WriteLine("Exiting...");
+                            viewArtist();
                             break;
+
+                        case 3:
+                            DeleteArtist();
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Exit");
+                            break;
+
 
                         default:
                             Console.Clear();
@@ -78,7 +108,7 @@ namespace MusicPlayList
                     System.Threading.Thread.Sleep(2000);
                 }
 
-            } while (userInput != 2);
+            } while (userInput != 4);
         }
     }
 }
